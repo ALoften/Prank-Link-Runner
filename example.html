@@ -1,0 +1,80 @@
+<html>
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+  crossorigin="anonymous"></script>
+  
+  <style>
+    body {
+      background: gray;
+    }
+
+    div {
+      margin: 100px;
+
+    }
+
+    a {
+      color: #fff;
+      transition: 0.15s;
+
+    }
+    
+  </style>
+  
+</head>
+  
+<body>  
+
+  <p>
+    This is just a fun little pranky thing. The links run away from the mouse by a random amount between 40 and -40 pixels in both top and left.
+
+  </p>
+  <p>
+    Have fun with your friends. haha!
+
+  </p>
+
+  <a>Links</a>
+  <div>
+
+    <a>meow</a>
+    <a>meow</a>
+    <a>meow</a>
+    <a>meow</a>
+    <a>meow</a>
+
+  </div>
+  
+  
+  
+  
+  
+  <script>
+    $("a").css({"top" : "0"});
+      console.log($("a").css("top"));
+
+      var moveAmount = ["40", "-40"];
+
+      $("a").mouseover(function() {
+        $(this).css({
+          "position" : "relative",
+          "top"      : "+=" + (Math.random() < 0.5 ? 40 : -40) + "px",
+          "left"      : "+=" + (Math.random() < 0.5 ? 40 : -40)  + "px"
+
+        });
+
+      });
+
+      $("a").click(function(e) {
+        e.preventDefault();
+
+      });
+
+    
+  </script>
+  
+</body>  
+  
+</html>
